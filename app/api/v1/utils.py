@@ -56,7 +56,7 @@ def create_input_prompt(
 
         # If there is no line of source code, then stop generating example prompt
         # because there is no space to insert new example.
-        if example.count("\n") - 1 == 0:
+        if example.count("\n") < 1:
             break
         example = example.replace("$$N$$", str(example.count("\n") - 1)) + "\n\n"
 
