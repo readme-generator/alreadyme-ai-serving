@@ -17,13 +17,7 @@ router = APIRouter()
 config = OmegaConf.load(os.environ.get("SERVER_CONFIG", "resources/config.yaml"))
 tokenizer = AutoTokenizer.from_pretrained(config.model)
 
-worker = GenerationWorker(
-    config.model,
-    max_length=config.generation.max_length,
-    top_k=config.generation.top_k,
-    temperature=config.generation.temperature,
-    no_repeat_ngram_size=config.generation.no_repeat_ngram_size,
-)
+worker = GenerationWorker(config.model, **config.generation)
 worker.run()
 
 

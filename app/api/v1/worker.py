@@ -4,25 +4,16 @@ import asyncio
 import multiprocessing as mp
 import os
 import time
+from typing import Any
 
 import torch
 from loguru import logger
 
 
 class GenerationWorker:
-    def __init__(
-        self,
-        model: str,
-        max_length: int,
-        top_k: int,
-        temperature: float,
-        no_repeat_ngram_size: int,
-    ):
+    def __init__(self, model: str, **kwargs: Any):
         self.model = model
-        self.max_length = max_length
-        self.top_k = top_k
-        self.temperature = temperature
-        self.no_repeat_ngram_size = no_repeat_ngram_size
+        self.generation_kwargs = kwargs
         self.queue = mp.Queue()
 
     def request(self, prompt: str) -> asyncio.Future:
@@ -56,13 +47,7 @@ class GenerationWorker:
             logger.debug("generation request is received in worker process.")
 
             start_time = time.time()
-            output = generator(
-                prompt,
-                do_sample=True,
-                top_k=self.top_k,
-                temperature=self.temperature,
-                max_length=self.max_length,
-            )
+            output = generator(prompt, **self.generation_kwargs)
             output = output[0]["generated_text"][len(prompt) :]
 
             latency = time.time() - start_time

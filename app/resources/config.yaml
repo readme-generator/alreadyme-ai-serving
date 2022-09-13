@@ -1,4 +1,4 @@
-model: resources/bloom-1b7-finetuned-readme-160k-steps
+model: resources/bloom-1b7-finetuned-readme-270k-steps
 
 prompt:
   separator: "&&&&&&"
@@ -6,7 +6,7 @@ prompt:
   max_source_code_tokens: 256
 
 generation:
+  do_sample: true
   max_length: 2048
-  top_k: 0
-  temperature: 0.85
-  no_repeat_ngram_size: 4
+  top_p: 0.92
+  temperature: 0.95
