@@ -1,4 +1,4 @@
-# ALREADYME AI Serving
+# Serving ALREADYME.md AI Model
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?&logo=fastapi)](https://github.com/tiangolo/fastapi)
 [![docker](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)](https://www.docker.com/)
