@@ -1,7 +1,7 @@
 # ALREADYME AI Serving
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?&logo=fastapi)](https://github.com/tiangolo/fastapi)
-[![](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)](https://www.docker.com/)
+[![docker](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)](https://www.docker.com/)
 [![redoc](https://img.shields.io/badge/docs-redoc-blue)](https://jolly-zebra-41.redoc.ly/)
 [![license](https://img.shields.io/github/license/readme-generator/alreadyme-ai-research)](./LICENSE)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -55,6 +55,11 @@ You can change the version of cuda, cudnn, ubuntu and python. They can be useful
 $ docker run --gpus all -p 8080:80 alreadyme-ai-serving:v0.1.2
 ```
 The docker container will launch the server on port 80, so you should binding to your own port number (e.g. 8080).
+
+## Documentation
+**alreadyme-ai-serving** supports OpenAPI and you can see the documentation of the APIs in your server. If the server is running locally, check out `http://127.0.0.1:8080/docs` for swagger or `http://127.0.0.1:8080/redoc` for redoc.
+
+For convenience, we hosted [free redoc documentation page](https://jolly-zebra-41.redoc.ly/). You may login to see the details.
 
 ## License
 **alreadyme-ai-serving** is released under the Apache License 2.0. License can be found in [here](./LICENSE).
