@@ -101,6 +101,7 @@ async def stream_generation(websocket: WebSocket):
     async for word in session.stream(request_id):
         text += word
         await websocket.send_text(word)
+    await websocket.send_text("")
     await websocket.close()
 
     if config.callback is not None:
