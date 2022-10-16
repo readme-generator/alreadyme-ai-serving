@@ -20,7 +20,7 @@ access this API from frontend (e.g. website, application, desktop and etc.)
 directly. Instead, you should use another proxy-server to relay the inputs and
 outputs.
     """,
-    version="0.2.0",
+    version="0.2.1",
 )
 # app.include_router(v1_router, prefix="/api/v1", tags=["v1"])
 app.include_router(v2_router, prefix="/api/v2", tags=["v2"])
