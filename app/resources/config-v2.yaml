@@ -1,0 +1,13 @@
+callback: null  # http://43.200.219.154:8080/api/v1/ai/readme
+model: resources/compiled-bloom-1b7-finetuned-readme-270k-steps
+
+prompt:
+  separator: "&&&&&&"
+  max_total_tokens: 1348
+  max_source_code_tokens: 256
+
+generation:
+  max_stream: 4
+  temperature: 0.95
+  pad_to_multiple_of: 8
+  max_length: 2048

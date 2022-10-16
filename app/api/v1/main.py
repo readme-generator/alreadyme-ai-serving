@@ -14,7 +14,7 @@ from .worker import GenerationWorker
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 router = APIRouter()
-config = OmegaConf.load(os.environ.get("SERVER_CONFIG", "resources/config.yaml"))
+config = OmegaConf.load(os.environ.get("SERVER_CONFIG_V1", "resources/config-v1.yaml"))
 tokenizer = AutoTokenizer.from_pretrained(config.model)
 
 worker = GenerationWorker(config.model, **config.generation)

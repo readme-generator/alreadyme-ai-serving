@@ -5,7 +5,7 @@ FROM nvidia/cuda:${CUDA_VER}-cudnn${CUDNN_VER}-devel-ubuntu${UBUNTU_VER}
 
 LABEL maintainer="ALREADYME"
 LABEL repository="alreadyme-ai-serving"
-LABEL version="v0.1.2"
+LABEL version="v0.2.0"
 
 RUN apt update && \
     apt install -y wget \
@@ -31,4 +31,5 @@ COPY ./app /workspace/app
 WORKDIR /workspace/app
 
 EXPOSE 80
+ENV LOGURU_LEVEL=INFO
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
