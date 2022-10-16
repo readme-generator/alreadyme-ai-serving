@@ -5,7 +5,7 @@ FROM nvidia/cuda:${CUDA_VER}-cudnn${CUDNN_VER}-devel-ubuntu${UBUNTU_VER}
 
 LABEL maintainer="ALREADYME"
 LABEL repository="alreadyme-ai-serving"
-LABEL version="v0.2.2"
+LABEL version="v0.2.3"
 
 RUN apt update && \
     apt install -y wget \
@@ -28,9 +28,12 @@ RUN pip install --no-cache-dir --upgrade pip && \
         loguru \
         aiohttp
 
+COPY ./resources /workspace/resources
+COPY ./config /workspace/config
 COPY ./app /workspace/app
-WORKDIR /workspace/app
+WORKDIR /workspace
 
 EXPOSE 80
 ENV LOGURU_LEVEL=INFO
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+ENV PYTHONPATH=app
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]

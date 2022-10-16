@@ -35,7 +35,7 @@ class GenerationRequestData(BaseModel):
 async def startup():
     global config, tokenizer, session
 
-    config = os.environ.get("SERVER_CONFIG_V2", "resources/config-v2.yaml")
+    config = os.environ.get("SERVER_CONFIG_V2", "config/config-v2.yaml")
     config = OmegaConf.load(config)
 
     tokenizer = AutoTokenizer.from_pretrained(config.model)
