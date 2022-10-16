@@ -25,7 +25,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
         "fastapi[all]" \
         omegaconf \
         transformers \
-        loguru
+        loguru \
+        aiohttp
 
 COPY ./app /workspace/app
 WORKDIR /workspace/app
