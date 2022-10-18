@@ -255,7 +255,7 @@ class GenerationSession:
         logger.info("generation subprocess has been started.")
 
         start_time = time.time()
-        model = torch.jit.load(self.model_path).cuda().half()
+        model = torch.jit.load(self.model_path).cuda().float()
         logger.info(
             f"<g>{self.model_path}</g> has been loaded. "
             f"estimated time: <g>{round(time.time() - start_time, 4)}</g>"
@@ -269,7 +269,7 @@ class GenerationSession:
             num_hidden_layers=self.options.num_hidden_layers,
             num_attention_heads=self.options.num_attention_heads,
         )
-        context.cuda().half()
+        context.cuda().float()
 
         logger.info("creating initializer and looper.")
         initializer = GenerationInitializer(
