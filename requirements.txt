@@ -1,0 +1,7 @@
+aiohttp
+fastapi
+loguru
+omegaconf
+pydantic
+torch
+transformers
