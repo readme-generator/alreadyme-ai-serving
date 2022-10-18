@@ -5,7 +5,7 @@ FROM nvidia/cuda:${CUDA_VER}-cudnn${CUDNN_VER}-devel-ubuntu${UBUNTU_VER}
 
 LABEL maintainer="ALREADYME"
 LABEL repository="alreadyme-ai-serving"
-LABEL version="v0.2.4"
+LABEL version="v0.2.6"
 
 RUN apt update && \
     apt install -y wget \

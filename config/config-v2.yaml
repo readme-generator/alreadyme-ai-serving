@@ -7,7 +7,7 @@ prompt:
   max_source_code_tokens: 256
 
 generation:
-  max_stream: 2
-  temperature: 0.88
+  max_stream: 4
+  temperature: 0.92
   pad_to_multiple_of: 8
   max_length: 2048
