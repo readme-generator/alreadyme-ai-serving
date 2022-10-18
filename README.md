@@ -4,6 +4,7 @@
 [![docker](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)](https://www.docker.com/)
 [![redoc](https://img.shields.io/badge/docs-redoc-blue)](https://jolly-zebra-41.redoc.ly/)
 [![license](https://img.shields.io/github/license/readme-generator/alreadyme-ai-research)](./LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Freadme-generator%2Falreadyme-ai-serving.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Freadme-generator%2Falreadyme-ai-serving?ref=badge_shield)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![CodeFactor](https://www.codefactor.io/repository/github/readme-generator/alreadyme-ai-serving/badge)](https://www.codefactor.io/repository/github/readme-generator/alreadyme-ai-serving)
 
@@ -63,3 +64,5 @@ For convenience, we hosted [free redoc documentation page](https://jolly-zebra-4
 
 ## License
 **alreadyme-ai-serving** is released under the Apache License 2.0. License can be found in [here](./LICENSE).
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Freadme-generator%2Falreadyme-ai-serving.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Freadme-generator%2Falreadyme-ai-serving?ref=badge_large)
