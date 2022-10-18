@@ -1,5 +1,5 @@
 callback: http://43.200.219.154:8080/api/v1/ai/readme
-model: resources/compiled-bloom-1b7-finetuned-readme-270k-steps
+model: resources/compiled-bloom-1b7-finetuned-readme-500k-steps
 
 prompt:
   separator: "&&&&&&"
@@ -8,6 +8,6 @@ prompt:
 
 generation:
   max_stream: 4
-  temperature: 0.95
+  temperature: 0.88
   pad_to_multiple_of: 8
   max_length: 2048
